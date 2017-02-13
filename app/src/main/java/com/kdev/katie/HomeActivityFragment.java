@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -13,6 +14,7 @@ import android.widget.Toast;
  * A placeholder fragment containing a simple view.
  */
 public class HomeActivityFragment extends Fragment {
+    private WebView myWebView;
 
     public HomeActivityFragment() {
     }
@@ -22,6 +24,8 @@ public class HomeActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        View rootWebView = inflater.inflate(R.layout.web_view, container, false);
+        myWebView= (WebView) rootWebView.findViewById(R.id.webview_home);
 
         GridView gridView = (GridView) rootView.findViewById(R.id.gridview_home);
         gridView.setAdapter(new ImageAdapter(getContext()));
@@ -31,29 +35,63 @@ public class HomeActivityFragment extends Fragment {
                 switch (position){
                     case 0:
                         Toast.makeText(getContext(), "Facebook" , Toast.LENGTH_SHORT).show();
+                        loadview(position);
                         break;
                     case 1:
                         Toast.makeText(getContext(), "Google" , Toast.LENGTH_SHORT).show();
+                        loadview(position);
                         break;
                     case 2:
                         Toast.makeText(getContext(), "Instagram" , Toast.LENGTH_SHORT).show();
+                        loadview(position);
                         break;
                     case 3:
                         Toast.makeText(getContext(), "Pinterest" , Toast.LENGTH_SHORT).show();
+                        loadview(position);
                         break;
                     case 4:
                         Toast.makeText(getContext(), "Skype" , Toast.LENGTH_SHORT).show();
+                        loadview(position);
                         break;
                     case 5:
                         Toast.makeText(getContext(), "Twitter" , Toast.LENGTH_SHORT).show();
+                        loadview(position);
                         break;
                     default:
                         Toast.makeText(getContext(), "Error ?" , Toast.LENGTH_SHORT).show();
+                        loadview(position);
                         break;
                 }
             }
         });
 
         return rootView;
+    }
+
+    public void loadview(int reference){
+        switch (reference){
+            case 0:
+                myWebView.loadUrl("http://www.facebook.com");
+                return;
+            case 1:
+                myWebView.loadUrl("http://www.google.com");
+                return;
+            case 2:
+                myWebView.loadUrl("http://www.instagram.com");
+                return;
+            case 3:
+                myWebView.loadUrl("http://www.pinterest.com");
+                return;
+            case 4:
+                myWebView.loadUrl("http://www.skype.com");
+                return;
+            case 5:
+                myWebView.loadUrl("http://www.twitter.com");
+                return;
+            default:
+                return;
+
+        }
+
     }
 }
