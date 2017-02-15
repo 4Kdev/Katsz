@@ -1,5 +1,6 @@
 package com.kdev.katie;
 
+import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,6 +16,9 @@ import android.widget.Toast;
  */
 public class HomeActivityFragment extends Fragment {
     private WebView myWebView;
+    private Resources res;
+    private static String[] socialApps;
+    private static String[] socialWebs;
 
     public HomeActivityFragment() {
     }
@@ -22,6 +26,10 @@ public class HomeActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
+
+        res = getContext().getResources();
+        socialApps = res.getStringArray(R.array.social_app);
+        socialWebs = res.getStringArray(R.array.social_web);
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         View rootWebView = inflater.inflate(R.layout.web_view, container, false);
@@ -32,36 +40,37 @@ public class HomeActivityFragment extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
-                        Toast.makeText(getContext(), "Facebook" , Toast.LENGTH_SHORT).show();
-                        loadview(position);
-                        break;
-                    case 1:
-                        Toast.makeText(getContext(), "Google" , Toast.LENGTH_SHORT).show();
-                        loadview(position);
-                        break;
-                    case 2:
-                        Toast.makeText(getContext(), "Instagram" , Toast.LENGTH_SHORT).show();
-                        loadview(position);
-                        break;
-                    case 3:
-                        Toast.makeText(getContext(), "Pinterest" , Toast.LENGTH_SHORT).show();
-                        loadview(position);
-                        break;
-                    case 4:
-                        Toast.makeText(getContext(), "Skype" , Toast.LENGTH_SHORT).show();
-                        loadview(position);
-                        break;
-                    case 5:
-                        Toast.makeText(getContext(), "Twitter" , Toast.LENGTH_SHORT).show();
-                        loadview(position);
-                        break;
-                    default:
-                        Toast.makeText(getContext(), "Error ?" , Toast.LENGTH_SHORT).show();
-                        loadview(position);
-                        break;
-                }
+//                switch (position){
+//                    case 0:
+//                        Toast.makeText(getContext(), socialApps[0] , Toast.LENGTH_SHORT).show();
+////                        loadview(position);
+//                        break;
+//                    case 1:
+//                        Toast.makeText(getContext(), "Google" , Toast.LENGTH_SHORT).show();
+////                        loadview(position);
+//                        break;
+//                    case 2:
+//                        Toast.makeText(getContext(), "Instagram" , Toast.LENGTH_SHORT).show();
+////                        loadview(position);
+//                        break;
+//                    case 3:
+//                        Toast.makeText(getContext(), "Pinterest" , Toast.LENGTH_SHORT).show();
+////                        loadview(position);
+//                        break;
+//                    case 4:
+//                        Toast.makeText(getContext(), "Skype" , Toast.LENGTH_SHORT).show();
+////                        loadview(position);
+//                        break;
+//                    case 5:
+//                        Toast.makeText(getContext(), "Twitter" , Toast.LENGTH_SHORT).show();
+////                        loadview(position);
+//                        break;
+//                    default:
+//                        Toast.makeText(getContext(), "Error ?" , Toast.LENGTH_SHORT).show();
+////                        loadview(position);
+//                        break;
+//                }
+                auxGrid(position);
             }
         });
 
@@ -93,5 +102,10 @@ public class HomeActivityFragment extends Fragment {
 
         }
 
+    }
+
+    public void auxGrid(int position){
+        Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
+        myWebView.loadUrl(socialWebs[position]);
     }
 }

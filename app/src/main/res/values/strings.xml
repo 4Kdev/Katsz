@@ -2,4 +2,39 @@
     <string name="app_name">Katie</string>
     <string name="action_settings">Settings</string>
     <string name="home_title">Lista de Apps</string>
+
+    <string-array name="social_app">
+        <item>Facebook</item>
+        <item>Twitter</item>
+        <item>LinkedIN</item>
+        <item>Google +</item>
+        <item>Youtube</item>
+        <item>Instagram</item>
+        <item>Pinterest</item>
+        <item>Tumblr</item>
+        <item>Vine</item>
+        <item>Reddit</item>
+        <item>Dropbox</item>
+        <item>Blogspot</item>
+        <item>Github</item>
+        <item>Swarm By foursquare</item>
+        <item>Flickr</item>
+    </string-array>
+    <string-array name="social_web">
+        <item>"https://www.facebook.com"</item>
+        <item>"https://www.twitter.com"</item>
+        <item>"https://www.linkedin.com"</item>
+        <item>"https://plus.google.com"</item>
+        <item>"https://www.youtube.com"</item>
+        <item>"https://www.instagram.com"</item>
+        <item>"https://www.pinterest.com"</item>
+        <item>"https://www.tumblr.com"</item>
+        <item>"https://www.vine.com"</item>
+        <item>"https://www.reddit.com"</item>
+        <item>"https://www.dropbox.com"</item>
+        <item>"https://www.blogspot.com"</item>
+        <item>"https://www.github.com"</item>
+        <item>"https://es.swarmapp.com/"</item>
+        <item>"https://www.flickr.com"</item>
+    </string-array>
 </resources>
