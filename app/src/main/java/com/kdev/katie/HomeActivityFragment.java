@@ -40,68 +40,11 @@ public class HomeActivityFragment extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                switch (position){
-//                    case 0:
-//                        Toast.makeText(getContext(), socialApps[0] , Toast.LENGTH_SHORT).show();
-////                        loadview(position);
-//                        break;
-//                    case 1:
-//                        Toast.makeText(getContext(), "Google" , Toast.LENGTH_SHORT).show();
-////                        loadview(position);
-//                        break;
-//                    case 2:
-//                        Toast.makeText(getContext(), "Instagram" , Toast.LENGTH_SHORT).show();
-////                        loadview(position);
-//                        break;
-//                    case 3:
-//                        Toast.makeText(getContext(), "Pinterest" , Toast.LENGTH_SHORT).show();
-////                        loadview(position);
-//                        break;
-//                    case 4:
-//                        Toast.makeText(getContext(), "Skype" , Toast.LENGTH_SHORT).show();
-////                        loadview(position);
-//                        break;
-//                    case 5:
-//                        Toast.makeText(getContext(), "Twitter" , Toast.LENGTH_SHORT).show();
-////                        loadview(position);
-//                        break;
-//                    default:
-//                        Toast.makeText(getContext(), "Error ?" , Toast.LENGTH_SHORT).show();
-////                        loadview(position);
-//                        break;
-//                }
                 auxGrid(position);
             }
         });
 
         return rootView;
-    }
-
-    public void loadview(int reference){
-        switch (reference){
-            case 0:
-                myWebView.loadUrl("http://www.facebook.com");
-                return;
-            case 1:
-                myWebView.loadUrl("http://www.google.com");
-                return;
-            case 2:
-                myWebView.loadUrl("http://www.instagram.com");
-                return;
-            case 3:
-                myWebView.loadUrl("http://www.pinterest.com");
-                return;
-            case 4:
-                myWebView.loadUrl("http://www.skype.com");
-                return;
-            case 5:
-                myWebView.loadUrl("http://www.twitter.com");
-                return;
-            default:
-                return;
-
-        }
-
     }
 
     public void auxGrid(int position){

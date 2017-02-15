@@ -20,6 +20,7 @@
         <item>Swarm By foursquare</item>
         <item>Flickr</item>
     </string-array>
+
     <string-array name="social_web">
         <item>"https://www.facebook.com"</item>
         <item>"https://www.twitter.com"</item>
