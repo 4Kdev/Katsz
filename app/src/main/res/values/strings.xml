@@ -4,21 +4,22 @@
     <string name="home_title">Lista de Apps</string>
 
     <string-array name="social_app">
-        <item>Facebook</item>
-        <item>Twitter</item>
-        <item>LinkedIN</item>
-        <item>Google +</item>
-        <item>Youtube</item>
-        <item>Instagram</item>
-        <item>Pinterest</item>
-        <item>Tumblr</item>
-        <item>Vine</item>
-        <item>Reddit</item>
-        <item>Dropbox</item>
         <item>Blogspot</item>
-        <item>Github</item>
-        <item>Swarm By foursquare</item>
+        <item>Dropbox</item>
+        <item>Facebook</item>
         <item>Flickr</item>
+        <item>Github</item>
+        <item>Google +</item>
+        <item>Instagram</item>
+        <item>LinkedIN</item>
+        <item>Pinterest</item>
+        <item>Reddit</item>
+        <item>Skype</item>
+        <item>Swarm By foursquare</item>
+        <item>Tumblr</item>
+        <item>Twitter</item>
+        <item>Vine</item>
+        <item>Youtube</item>
     </string-array>
 
     <string-array name="social_web">

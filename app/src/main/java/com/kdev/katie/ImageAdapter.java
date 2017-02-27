@@ -52,12 +52,22 @@ public class ImageAdapter extends BaseAdapter {
 
     // references to our images
     private Integer[] mThumbIds = {
+            R.drawable.icontestblogspot,
+            R.drawable.icontestdropbox,
             R.drawable.icontestfacebook,
+            R.drawable.icontestflickr,
+            R.drawable.icontestgithub,
             R.drawable.icontestgoogle,
             R.drawable.icontestinstagram,
+            R.drawable.icontestlinkedin,
             R.drawable.icontestpinterest,
+            R.drawable.icontestreddit,
             R.drawable.icontestskype,
-            R.drawable.icontesttwitter
+            R.drawable.icontestswarm,
+            R.drawable.icontesttumblr,
+            R.drawable.icontesttwitter,
+            R.drawable.icontestvine,
+            R.drawable.icontestyoutube,
     };
 }
 

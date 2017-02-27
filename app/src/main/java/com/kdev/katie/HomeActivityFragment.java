@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -49,6 +51,7 @@ public class HomeActivityFragment extends Fragment {
 
     public void auxGrid(int position){
         Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
-        myWebView.loadUrl(socialWebs[position]);
+        myWebView.setWebViewClient(new WebViewClient());
+        myWebView.loadUrl("https://m.facebook.com");
     }
 }
