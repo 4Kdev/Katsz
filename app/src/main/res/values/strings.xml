@@ -14,7 +14,6 @@
         <item>LinkedIN</item>
         <item>Pinterest</item>
         <item>Reddit</item>
-        <item>Skype</item>
         <item>Swarm By foursquare</item>
         <item>Tumblr</item>
         <item>Twitter</item>
@@ -23,20 +22,20 @@
     </string-array>
 
     <string-array name="social_web">
-        <item>"https://www.facebook.com"</item>
-        <item>"https://www.twitter.com"</item>
-        <item>"https://www.linkedin.com"</item>
-        <item>"https://plus.google.com"</item>
-        <item>"https://www.youtube.com"</item>
-        <item>"https://www.instagram.com"</item>
-        <item>"https://www.pinterest.com"</item>
-        <item>"https://www.tumblr.com"</item>
-        <item>"https://www.vine.com"</item>
-        <item>"https://www.reddit.com"</item>
-        <item>"https://www.dropbox.com"</item>
         <item>"https://www.blogspot.com"</item>
-        <item>"https://www.github.com"</item>
-        <item>"https://es.swarmapp.com/"</item>
+        <item>"https://www.dropbox.com"</item>
+        <item>"https://www.facebook.com"</item>
         <item>"https://www.flickr.com"</item>
+        <item>"https://www.github.com"</item>
+        <item>"https://plus.google.com"</item>
+        <item>"https://www.instagram.com"</item>
+        <item>"https://www.linkedin.com"</item>
+        <item>"https://www.pinterest.com"</item>
+        <item>"https://www.reddit.com"</item>
+        <item>"https://es.swarmapp.com/"</item>
+        <item>"https://www.tumblr.com"</item>
+        <item>"https://www.twitter.com"</item>
+        <item>"https://www.vine.com"</item>
+        <item>"https://www.youtube.com"</item>
     </string-array>
 </resources>

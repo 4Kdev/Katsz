@@ -52,6 +52,6 @@ public class HomeActivityFragment extends Fragment {
     public void auxGrid(int position){
         Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
         myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl("https://m.facebook.com");
+        myWebView.loadUrl(socialWebs[position]);
     }
 }

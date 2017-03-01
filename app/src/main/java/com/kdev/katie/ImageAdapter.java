@@ -62,7 +62,6 @@ public class ImageAdapter extends BaseAdapter {
             R.drawable.icontestlinkedin,
             R.drawable.icontestpinterest,
             R.drawable.icontestreddit,
-            R.drawable.icontestskype,
             R.drawable.icontestswarm,
             R.drawable.icontesttumblr,
             R.drawable.icontesttwitter,
