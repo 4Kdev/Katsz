@@ -3,6 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="text_gridview">34dp</dimen>
-    <dimen name="icon_size">96dp</dimen>
+    <dimen name="text_gridview">16dp</dimen>
+    <dimen name="icon_size">64dp</dimen>
+    <dimen name="space_between_icon">12dp</dimen>
 </resources>
