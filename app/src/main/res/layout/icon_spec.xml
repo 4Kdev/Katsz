@@ -13,5 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:layout_gravity="bottom"
-        android:textSize="@dimen/text_gridview" />
+        android:paddingLeft="@dimen/space_between_icon"
+        android:textSize="@dimen/text_gridview"
+        android:textColor="@color/colorPrimaryDark"/>
 </LinearLayout>

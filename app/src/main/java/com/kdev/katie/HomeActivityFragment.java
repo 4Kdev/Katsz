@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
@@ -51,6 +50,7 @@ public class HomeActivityFragment extends Fragment {
 
     public void auxGrid(int position){
         Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
+//        Debe ser usado en telefono y no en simulador ???
 //        myWebView.setWebViewClient(new WebViewClient());
         myWebView.loadUrl(socialWebs[position]);
     }
