@@ -1,5 +1,6 @@
 package com.kdev.katie;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -49,9 +50,11 @@ public class HomeActivityFragment extends Fragment {
     }
 
     public void auxGrid(int position){
-        Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
-//        Debe ser usado en telefono y no en simulador ???
-//        myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl(socialWebs[position]);
+        Intent intent = new Intent(getContext(), FullscreenActivity.class);
+        startActivity(intent);
+//        Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
+////        Debe ser usado en telefono y no en simulador ???
+////        myWebView.setWebViewClient(new WebViewClient());
+//        myWebView.loadUrl(socialWebs[position]);
     }
 }
