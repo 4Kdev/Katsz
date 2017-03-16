@@ -1,6 +1,9 @@
 package com.kdev.katie;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -95,6 +98,26 @@ public class FullscreenActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        FloatingActionButton fab_e = (FloatingActionButton) findViewById(R.id.fab_exit);
+        fab_e.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Salida de la app", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+//                startActivity( new Intent(HomeActivity.this, AccountActivity.class));
+            }
+        });
+
+        FloatingActionButton fab_h = (FloatingActionButton) findViewById(R.id.fab_home);
+        fab_h.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Back to home activity", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+//                startActivity( new Intent(HomeActivity.this, AccountActivity.class));
+            }
+        });
 
         mVisible = true;
 //        mControlsView = findViewById(R.id.fullscreen_content_controls);
