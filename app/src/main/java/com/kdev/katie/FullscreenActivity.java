@@ -105,6 +105,13 @@ public class FullscreenActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Salida de la app", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                /*Same ?*/
+//                moveTaskToBack(true);
+//                android.os.Process.killProcess(android.os.Process.myPid());
+//                System.exit(0);
+//                Intent ie = new Intent();
+//                ie.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+                finishAffinity();
 //                startActivity( new Intent(HomeActivity.this, AccountActivity.class));
             }
         });
@@ -115,6 +122,7 @@ public class FullscreenActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Back to home activity", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                onBackPressed();
 //                startActivity( new Intent(HomeActivity.this, AccountActivity.class));
             }
         });
