@@ -30,6 +30,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kdev.katie.HomeActivity" />
         </activity>
+        <activity
+            android:name=".LoadActivity"
+            android:label="@string/title_activity_load"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kdev.katie.HomeActivity" />
+        </activity>
     </application>
 
 </manifest>

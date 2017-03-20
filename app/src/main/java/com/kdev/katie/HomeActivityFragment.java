@@ -50,7 +50,7 @@ public class HomeActivityFragment extends Fragment {
     }
 
     public void auxGrid(int position){
-        Intent intent = new Intent(getContext(), FullscreenActivity.class);
+        Intent intent = new Intent(getContext(), LoadActivity.class);
         startActivity(intent);
 //        Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
 ////        Debe ser usado en telefono y no en simulador ???
