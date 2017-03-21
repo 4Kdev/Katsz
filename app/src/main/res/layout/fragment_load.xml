@@ -9,9 +9,35 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        style="@android:style/Widget.DeviceDefault.ProgressBar.Large"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp">
     </ProgressBar>
+
+    <TextView
+        android:id="@+id/textLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/progressBar" android:layout_alignTop="@id/progressBar"
+        android:layout_alignRight="@id/progressBar" android:layout_alignBottom="@id/progressBar"
+        android:background="@android:color/transparent"
+        android:text="##"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/progressBar"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        android:layout_marginBottom="8dp" />
 
     <Button
         android:id="@+id/button"
@@ -35,7 +61,8 @@
         android:layout_marginLeft="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        android:onClick="hideProgress"/>
+        android:onClick="hideProgress"
+        app:layout_constraintHorizontal_bias="0.885" />
 
 
 </android.support.constraint.ConstraintLayout>
