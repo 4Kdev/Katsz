@@ -1,13 +1,18 @@
 package com.kdev.katie;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class WebActivity extends AppCompatActivity {
+    private Resources res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,25 @@ public class WebActivity extends AppCompatActivity {
             }
         });
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        /**
+         * Hay que traer la posicion de la main activity
+         */
+        res = this.getResources();
+        String[] webPages = res.getStringArray(R.array.social_web);
+
+        WebView webV = (WebView) findViewById(R.id.webView);
+        //Copied
+        webV.getSettings().setJavaScriptEnabled(true);
+        webV.getSettings().setLoadsImagesAutomatically(true);
+        webV.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+        webV.getSettings().setAppCacheEnabled(false);
+        webV.getSettings().setLoadWithOverviewMode(true);
+        webV.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
+        webV.setScrollbarFadingEnabled(false);
+
+        webV.setWebViewClient(new WebViewClient());
+        webV.loadUrl(webPages[0]);
+
     }
 
 }
