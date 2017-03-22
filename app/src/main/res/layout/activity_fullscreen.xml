@@ -20,54 +20,43 @@
         <!--android:textSize="50sp"-->
         <!--android:textStyle="bold" />-->
 
-    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/webview_fullscreen"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:keepScreenOn="true"
-        android:fitsSystemWindows="true"
-        >
 
-    </WebView>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_alignBottom="@id/webview_fullscreen"
-        android:layout_alignLeft="@id/webview_fullscreen"
-        android:fitsSystemWindows="true"
-        app:srcCompat="@android:drawable/ic_media_rew" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_exit"
-        android:layout_alignBottom="@id/webview_fullscreen"
-        android:layout_alignRight="@id/webview_fullscreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/fab_margin"
-        android:fitsSystemWindows="true"
-        app:backgroundTint="@android:color/black"
-        app:srcCompat="@android:drawable/ic_delete" />
 
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->
-    <!--<FrameLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:fitsSystemWindows="true">-->
 
-        <!--<LinearLayout-->
-            <!--android:id="@+id/fullscreen_content_controls"-->
-            <!--style="?metaButtonBarStyle"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="bottom|center_horizontal"-->
-            <!--android:background="@color/black_overlay"-->
-            <!--android:orientation="horizontal"-->
-            <!--tools:ignore="UselessParent">-->
+            <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/webview_fullscreen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:keepScreenOn="true">
+
+            </WebView>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_alignBottom="@id/webview_fullscreen"
+                android:layout_alignLeft="@id/webview_fullscreen"
+                android:fitsSystemWindows="true"
+                app:srcCompat="@android:drawable/ic_media_rew" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_exit"
+                android:layout_alignBottom="@id/webview_fullscreen"
+                android:layout_alignRight="@id/webview_fullscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:fitsSystemWindows="true"
+                app:backgroundTint="@android:color/black"
+                app:srcCompat="@android:drawable/ic_delete" />
+
+
 
             <!--<Button-->
                 <!--android:id="@+id/dummy_button"-->
@@ -76,8 +65,5 @@
                 <!--android:layout_height="wrap_content"-->
                 <!--android:layout_weight="1"-->
                 <!--android:text="@string/dummy_button" />-->
-
-        <!--</LinearLayout>-->
-    <!--</FrameLayout>-->
 
 </RelativeLayout>

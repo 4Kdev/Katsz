@@ -33,9 +33,18 @@
         <activity
             android:name=".LoadActivity"
             android:label="@string/title_activity_load"
+            android:noHistory="true"
             android:parentActivityName=".HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:noHistory="true">
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kdev.katie.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".WebActivity"
+            android:label="@string/title_activity_web"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kdev.katie.HomeActivity" />

@@ -37,7 +37,7 @@ public class LoadActivity extends AppCompatActivity {
 
     public void hideProgress(View v){
         spinner.setVisibility(View.GONE);
-        Intent i = new Intent(this, FullscreenActivity.class);
+        Intent i = new Intent(this, WebActivity.class);
         startActivity(i);
     }
 }
