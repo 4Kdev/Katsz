@@ -44,4 +44,6 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_load">LoadActivity</string>
     <string name="title_activity_web">WebActivity</string>
+    
+    <string name="facebook_app_id">1877870875787253</string>
 </resources>
