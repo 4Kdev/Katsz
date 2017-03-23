@@ -64,9 +64,11 @@ public class WebActivity extends AppCompatActivity {
         webV.getSettings().setLoadWithOverviewMode(true);
         webV.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webV.setScrollbarFadingEnabled(false);
+        String newUA= "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0";
+        webV.getSettings().setUserAgentString(newUA);
 
         webV.setWebViewClient(new WebViewClient());
-        webV.loadUrl(webPages[0]);
+        webV.loadUrl("http://www.messenger.com");
 
     }
 
