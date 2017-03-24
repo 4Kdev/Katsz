@@ -29,7 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_action_home" />
+        app:srcCompat="@drawable/ic_action_home"
+        android:fitsSystemWindows="true"
+        android:keepScreenOn="true"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_back"
@@ -38,6 +40,8 @@
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="bottom|left"
-        app:srcCompat="@drawable/ic_action_close" />
+        app:srcCompat="@drawable/ic_action_close"
+        android:fitsSystemWindows="true"
+        android:keepScreenOn="true"/>
 
 </android.support.design.widget.CoordinatorLayout>
