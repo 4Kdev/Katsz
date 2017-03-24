@@ -12,6 +12,28 @@
     tools:showIn="@layout/activity_home">
 
     <TextView
+        android:id="@+id/text_button_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/space_between_icon"
+        android:text="App Especial"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <ImageButton
+        android:id="@+id/button_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_button_msg"
+        android:src="@drawable/messenger_button_blue_bg_round"
+        android:background="@android:color/transparent"
+        android:paddingLeft="24dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:onClick="callMsg"/>
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +41,8 @@
         android:text="@string/home_title"
         android:textColor="?attr/textColorAlertDialogListItem"
         android:textSize="18sp"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        android:layout_below="@+id/button_msg"/>
 
     <android.support.v4.widget.Space
         android:id="@+id/space1"
