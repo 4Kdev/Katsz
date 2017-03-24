@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 /**
@@ -21,6 +22,7 @@ public class HomeActivityFragment extends Fragment {
     private Resources res;
     private static String[] socialApps;
     private static String[] socialWebs;
+    private ImageButton buttonMsg;
 
     public HomeActivityFragment() {
     }
@@ -35,7 +37,8 @@ public class HomeActivityFragment extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         View rootWebView = inflater.inflate(R.layout.web_view, container, false);
-        myWebView= (WebView) rootWebView.findViewById(R.id.webview_home);
+        myWebView = (WebView) rootWebView.findViewById(R.id.webview_home);
+        buttonMsg = (ImageButton) rootView.findViewById(R.id.button_msg);
 
         GridView gridView = (GridView) rootView.findViewById(R.id.gridview_home);
         gridView.setAdapter(new ImageAdapter(getContext()));
@@ -43,6 +46,13 @@ public class HomeActivityFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 auxGrid(position);
+            }
+        });
+
+        buttonMsg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                auxGrid(10);
             }
         });
 
