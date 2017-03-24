@@ -24,7 +24,7 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
         android:id="@+id/gridview_home"
-        android:numColumns="2"
+        android:numColumns="3"
         android:verticalSpacing="@dimen/space_between_icon"/>
 
 </RelativeLayout>
