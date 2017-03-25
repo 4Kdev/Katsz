@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.kdev.katie.LoadActivityFragment"
-    tools:showIn="@layout/activity_load">
+    tools:showIn="@layout/activity_load"
+    android:id="@+id/load_fragment">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -24,7 +25,7 @@
     </ProgressBar>
 
     <TextView
-        android:id="@+id/textLoad"
+        android:id="@+id/text_load"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/progressBar" android:layout_alignTop="@id/progressBar"
@@ -52,7 +53,7 @@
         android:onClick="showProgress"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_load_web"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
