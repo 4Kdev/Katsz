@@ -13,6 +13,7 @@
         android:layout_height="150dp"
         style="@android:style/Widget.DeviceDefault.ProgressBar.Large"
         android:layout_marginRight="8dp"
+        android:indeterminateTint="@color/colorPrimary"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
