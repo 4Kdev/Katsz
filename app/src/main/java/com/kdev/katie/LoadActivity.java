@@ -12,30 +12,30 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class LoadActivity extends AppCompatActivity {
-    private ProgressBar spinner;
-    private FragmentManager fm;
-    private LoadActivityFragment fragment;
+//    private ProgressBar spinner;
+//    private FragmentManager fm;
+//    private LoadActivityFragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_load);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        spinner = (ProgressBar)findViewById(R.id.progressBar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        spinner = (ProgressBar)findViewById(R.id.progressBar);
 
-        fm = getSupportFragmentManager();
-        fragment = (LoadActivityFragment) fm.findFragmentById(R.id.load_fragment);
+//        fm = getSupportFragmentManager();
+//        fragment = (LoadActivityFragment) fm.findFragmentById(R.id.load_fragment);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "call the other activity", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "call the other activity", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
 //    public void showProgress(View v){
