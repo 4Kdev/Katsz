@@ -17,6 +17,7 @@ import android.widget.Toast;
 public class LoadActivityFragment extends Fragment {
     private TextView textCountdown;
     public CountDownTimer counter;
+    private Bundle extras;
 
     public LoadActivityFragment() {
 
@@ -25,6 +26,8 @@ public class LoadActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+         extras = getActivity().getIntent().getExtras();
 
         View rootView = inflater.inflate(R.layout.fragment_load, container, false);
         textCountdown = (TextView) rootView.findViewById(R.id.text_load);
@@ -64,6 +67,7 @@ public class LoadActivityFragment extends Fragment {
 
     public void skipThis(){
         Intent i = new Intent(getContext(), WebActivity.class);
+        i.putExtras(extras);
         startActivity(i);
     }
 }

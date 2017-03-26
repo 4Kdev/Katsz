@@ -16,6 +16,9 @@ import android.webkit.WebViewClient;
 
 public class WebActivity extends AppCompatActivity {
     private Resources res;
+    private int position;
+    private boolean specialApp;
+    private String urlWeb;
 
     private final Handler mHideHandler = new Handler();
     private static final int UI_ANIMATION_DELAY = 300;
@@ -64,6 +67,10 @@ public class WebActivity extends AppCompatActivity {
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
+        Bundle extras = getIntent().getExtras();
+        specialApp = extras.getBoolean("normal_web_app");
+        position = extras.getInt("position_list");
+
         mContentView = getWindow().getDecorView();
 //        View decorView = getWindow().getDecorView();
 //        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -108,6 +115,11 @@ public class WebActivity extends AppCompatActivity {
          */
         res = this.getResources();
         String[] webPages = res.getStringArray(R.array.social_web);
+        if (specialApp){
+            urlWeb = webPages[position];
+        }else{
+            urlWeb = "http://www.messenger.com";
+        }
 
         WebView webV = (WebView) findViewById(R.id.webView);
         //Copied
@@ -122,7 +134,7 @@ public class WebActivity extends AppCompatActivity {
         webV.getSettings().setUserAgentString(newUA);
 
         webV.setWebViewClient(new WebViewClient());
-        webV.loadUrl("http://www.messenger.com");
+        webV.loadUrl(urlWeb);
 
     }
 

@@ -45,23 +45,35 @@ public class HomeActivityFragment extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                auxGrid(position);
+                auxGrid(position,false);
             }
         });
 
         buttonMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                auxGrid(10);
+                auxGrid(0,true);
             }
         });
 
         return rootView;
     }
 
-    public void auxGrid(int position){
-        Intent intent = new Intent(getContext(), LoadActivity.class);
-        startActivity(intent);
+    public void auxGrid(int position, boolean special){
+        if (special) {
+            Intent intent = new Intent(getContext(), LoadActivity.class);
+            Bundle extras = new Bundle();
+            extras.putBoolean("normal_web_app",false);
+            intent.putExtras(extras);
+            startActivity(intent);
+        }else{
+            Intent intent = new Intent(getContext(), LoadActivity.class);
+            Bundle extras = new Bundle();
+            extras.putBoolean("normal_web_app",true);
+            extras.putInt("position_list",position);
+            intent.putExtras(extras);
+            startActivity(intent);
+        }
 //        Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
 ////        Debe ser usado en telefono y no en simulador ???
 ////        myWebView.setWebViewClient(new WebViewClient());
