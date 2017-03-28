@@ -19,6 +19,7 @@ public class WebActivity extends AppCompatActivity {
     private int position;
     private boolean specialApp;
     private String urlWeb;
+    private String newUA;
 
     private final Handler mHideHandler = new Handler();
     private static final int UI_ANIMATION_DELAY = 300;
@@ -130,7 +131,13 @@ public class WebActivity extends AppCompatActivity {
         webV.getSettings().setLoadWithOverviewMode(true);
         webV.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webV.setScrollbarFadingEnabled(false);
-        String newUA= "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0";
+
+        if (!specialApp){
+            newUA = "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0";
+        }else{
+            newUA = null;
+        }
+
         webV.getSettings().setUserAgentString(newUA);
 
         webV.setWebViewClient(new WebViewClient());
