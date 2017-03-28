@@ -5,6 +5,7 @@ import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
@@ -42,6 +43,7 @@ public class HomeActivityFragment extends Fragment {
 
         GridView gridView = (GridView) rootView.findViewById(R.id.gridview_home);
         gridView.setAdapter(new ImageAdapter(getContext()));
+        gridView.setFocusable(false);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
