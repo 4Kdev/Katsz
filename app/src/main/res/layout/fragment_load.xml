@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.kdev.katie.LoadActivityFragment"
     tools:showIn="@layout/activity_load"
-    android:id="@+id/load_fragment">
+    android:id="@+id/load_fragment"
+    android:animateLayoutChanges="true">
 
     <ProgressBar
         android:id="@+id/progressBar"
