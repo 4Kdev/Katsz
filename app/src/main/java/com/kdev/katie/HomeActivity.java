@@ -18,6 +18,15 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+//        getSupportActionBar().setElevation(0f);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+//        getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+//        getSupportActionBar().setTitle("Katie");
+        getSupportActionBar().setLogo(R.drawable.title);
+//        getSupportActionBar().setIcon(R.drawable.title);
+
     }
 
 //    @Override
