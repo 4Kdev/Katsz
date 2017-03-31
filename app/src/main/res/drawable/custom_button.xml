@@ -4,7 +4,7 @@
 
     <item android:state_pressed="true" >
         <shape>
-            <solid android:color="@color/accentdarkpurple"/>
+            <solid android:color="@color/colorAccentDark"/>
             <corners
                 android:radius="2dp" />
             <padding
@@ -17,7 +17,7 @@
 
     <item android:state_focused="true" >
         <shape>
-            <solid android:color="@color/accentdarkpurple"/>
+            <solid android:color="@color/colorAccentDark"/>
             <corners
                 android:radius="2dp" />
             <padding
@@ -30,7 +30,7 @@
 
     <item>
         <shape>
-            <solid android:color="@color/accentpurple"/>
+            <solid android:color="@color/colorAccent"/>
             <corners
                 android:radius="2dp" />
             <padding
