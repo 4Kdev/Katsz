@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
 //        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 //        getSupportActionBar().setTitle("Katie");
-        getSupportActionBar().setLogo(R.drawable.title);
+//        getSupportActionBar().setLogo(R.drawable.title);
 //        getSupportActionBar().setIcon(R.drawable.title);
 
     }

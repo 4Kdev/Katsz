@@ -4,57 +4,39 @@
 
     <item android:state_pressed="true" >
         <shape>
-            <gradient
-                android:startColor="@color/blue"
-                android:endColor="@color/darkblue"
-                android:angle="270" />
-            <stroke
-                android:width="3dp"
-                android:color="@color/red" />
+            <solid android:color="@color/accentdarkpurple"/>
             <corners
-                android:radius="3dp" />
+                android:radius="2dp" />
             <padding
-                android:left="10dp"
+                android:left="16dp"
                 android:top="10dp"
-                android:right="10dp"
+                android:right="16dp"
                 android:bottom="10dp" />
         </shape>
     </item>
 
     <item android:state_focused="true" >
         <shape>
-            <gradient
-                android:endColor="@color/orange"
-                android:startColor="@color/purple"
-                android:angle="270" />
-            <stroke
-                android:width="3dp"
-                android:color="@color/green" />
+            <solid android:color="@color/accentdarkpurple"/>
             <corners
-                android:radius="3dp" />
+                android:radius="2dp" />
             <padding
-                android:left="10dp"
+                android:left="16dp"
                 android:top="10dp"
-                android:right="10dp"
+                android:right="16dp"
                 android:bottom="10dp" />
         </shape>
     </item>
 
     <item>
         <shape>
-            <gradient
-                android:endColor="@color/darkgreen"
-                android:startColor="@color/darkorange"
-                android:angle="270" />
-            <stroke
-                android:width="3dp"
-                android:color="@color/darkpurple" />
+            <solid android:color="@color/accentpurple"/>
             <corners
-                android:radius="3dp" />
+                android:radius="2dp" />
             <padding
-                android:left="10dp"
+                android:left="16dp"
                 android:top="10dp"
-                android:right="10dp"
+                android:right="16dp"
                 android:bottom="10dp" />
         </shape>
     </item>
