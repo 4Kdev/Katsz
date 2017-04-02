@@ -15,6 +15,9 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 /**
  * A placeholder fragment containing a simple view.
  */
@@ -24,6 +27,7 @@ public class HomeActivityFragment extends Fragment {
     private static String[] socialApps;
     private static String[] socialWebs;
     private ImageButton buttonMsg;
+    private AdView adView;
 
     public HomeActivityFragment() {
     }
@@ -40,6 +44,13 @@ public class HomeActivityFragment extends Fragment {
         View rootWebView = inflater.inflate(R.layout.web_view, container, false);
         myWebView = (WebView) rootWebView.findViewById(R.id.webview_home);
         buttonMsg = (ImageButton) rootView.findViewById(R.id.button_msg);
+
+        adView = (AdView) rootView.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+
+        adView.loadAd(adRequest);
 
         GridView gridView = (GridView) rootView.findViewById(R.id.gridview_home);
         gridView.setAdapter(new ImageAdapter(getContext()));

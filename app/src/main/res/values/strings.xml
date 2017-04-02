@@ -46,4 +46,6 @@
     <string name="title_activity_web">WebActivity</string>
     
     <string name="facebook_app_id">1877870875787253</string>
+
+    <string name="banner_down_ad_unit_id">ca-app-pub-5824965550182149/3188019713</string>
 </resources>
