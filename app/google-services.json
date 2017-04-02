@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "432336284339",
+    "firebase_url": "https://katie-571be.firebaseio.com",
+    "project_id": "katie-571be",
+    "storage_bucket": "katie-571be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432336284339:android:15a0f33ffe95bdf1",
+        "android_client_info": {
+          "package_name": "com.kdev.katie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "432336284339-v5rpgdagdeikcttm44e83dj7odd49h4n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kdev.katie",
+            "certificate_hash": "c396d335f61e92db3d4f4d7f03a72a24ad985cde"
+          }
+        },
+        {
+          "client_id": "432336284339-u6jbva5tl7n3e8j8u582jlfg8apmifmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsjL-ag9nIrcOjb06xrJF8nNsoUCuslLI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "432336284339-u6jbva5tl7n3e8j8u582jlfg8apmifmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
