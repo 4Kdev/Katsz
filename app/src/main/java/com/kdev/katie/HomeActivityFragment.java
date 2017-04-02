@@ -15,8 +15,10 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -28,6 +30,7 @@ public class HomeActivityFragment extends Fragment {
     private static String[] socialWebs;
     private ImageButton buttonMsg;
     private AdView adView;
+    private InterstitialAd interstitialAd;
 
     public HomeActivityFragment() {
     }
@@ -52,13 +55,31 @@ public class HomeActivityFragment extends Fragment {
 
         adView.loadAd(adRequest);
 
+        interstitialAd = new InterstitialAd(getContext());
+        interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
+
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                requestNewInterstitial();
+                auxGrid(1,true);
+            }
+        });
+
+        requestNewInterstitial();
+
         GridView gridView = (GridView) rootView.findViewById(R.id.gridview_home);
         gridView.setAdapter(new ImageAdapter(getContext()));
         gridView.setFocusable(false);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                auxGrid(position,false);
+                if(interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                }else{
+                    auxGrid(position,false);
+                }
+
             }
         });
 
@@ -70,6 +91,13 @@ public class HomeActivityFragment extends Fragment {
         });
 
         return rootView;
+    }
+
+    public void requestNewInterstitial(){
+        AdRequest adIntRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        interstitialAd.loadAd(adIntRequest);
     }
 
     public void auxGrid(int position, boolean special){
