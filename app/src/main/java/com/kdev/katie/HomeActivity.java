@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 //        getSupportActionBar().setElevation(0f);
-//        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 //        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
