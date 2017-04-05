@@ -1,6 +1,7 @@
 package com.kdev.katie;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,7 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class LoadActivity extends AppCompatActivity {
-//    private ProgressBar spinner;
+    private ProgressBar spinner;
 //    private FragmentManager fm;
 //    private LoadActivityFragment fragment;
 
@@ -23,6 +24,13 @@ public class LoadActivity extends AppCompatActivity {
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 //        spinner = (ProgressBar)findViewById(R.id.progressBar);
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            spinner = (ProgressBar)findViewById(R.id.progressBar);
+            spinner.getIndeterminateDrawable().setColorFilter(
+                    getResources().getColor(R.color.colorPrimaryDark),
+                    android.graphics.PorterDuff.Mode.MULTIPLY);
+        }
 
 //        fm = getSupportFragmentManager();
 //        fragment = (LoadActivityFragment) fm.findFragmentById(R.id.load_fragment);
