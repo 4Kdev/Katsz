@@ -11,6 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+
 /**
  * A placeholder fragment containing a simple view.
  */
@@ -18,6 +23,7 @@ public class LoadActivityFragment extends Fragment {
     private TextView textCountdown;
     public CountDownTimer counter;
     private Bundle extras;
+    private InterstitialAd interstitialAd;
 
     public LoadActivityFragment() {
 
@@ -32,18 +38,44 @@ public class LoadActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_load, container, false);
         textCountdown = (TextView) rootView.findViewById(R.id.text_load);
         Button b = (Button) rootView.findViewById(R.id.button_load_web);
+
+        interstitialAd = new InterstitialAd(getContext());
+        interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
+
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                requestNewInterstitial();
+                cancelTimer();
+                skipThis();
+            }
+        });
+
+        requestNewInterstitial();
+
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "See ad's" , Toast.LENGTH_SHORT).show();
-                cancelTimer();
-                skipThis();
+                if(interstitialAd.isLoaded()){
+                    interstitialAd.show();
+                }else{
+                    Toast.makeText(getContext(), "See ad's" , Toast.LENGTH_SHORT).show();
+                    cancelTimer();
+                    skipThis();
+                }
             }
         });
 
         timerCount();
 
         return rootView;
+    }
+
+    public void requestNewInterstitial(){
+        AdRequest adIntRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
+        interstitialAd.loadAd(adIntRequest);
     }
 
     public boolean timerCount(){
@@ -54,8 +86,12 @@ public class LoadActivityFragment extends Fragment {
             }
 
         public void onFinish() {
-            textCountdown.setText("done!");
-            skipThis();
+            if(interstitialAd.isLoaded()){
+                interstitialAd.show();
+            }else {
+                textCountdown.setText("done!");
+                skipThis();
+            }
         }
         }.start();
         return false;
