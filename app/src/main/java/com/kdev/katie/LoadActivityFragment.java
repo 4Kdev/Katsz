@@ -79,7 +79,7 @@ public class LoadActivityFragment extends Fragment {
     }
 
     public boolean timerCount(){
-        counter = new CountDownTimer(5000, 1000) {
+        counter = new CountDownTimer(10000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 textCountdown.setText("" + millisUntilFinished / 1000);

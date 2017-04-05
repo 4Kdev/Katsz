@@ -5,20 +5,14 @@ import android.content.res.Resources;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.Toast;
-
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -31,7 +25,6 @@ public class HomeActivityFragment extends Fragment {
     private ImageButton buttonMsg;
     private int pos;
     private AdView adView;
-//    private InterstitialAd interstitialAd;
 
     public HomeActivityFragment() {
     }
@@ -56,31 +49,13 @@ public class HomeActivityFragment extends Fragment {
 
         adView.loadAd(adRequest);
 
-//        interstitialAd = new InterstitialAd(getContext());
-//        interstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-//
-//        interstitialAd.setAdListener(new AdListener() {
-//            @Override
-//            public void onAdClosed() {
-//                requestNewInterstitial();
-//                auxGrid(pos,false);
-//            }
-//        });
-
-//        requestNewInterstitial();
-
         GridView gridView = (GridView) rootView.findViewById(R.id.gridview_home);
         gridView.setAdapter(new ImageAdapter(getContext()));
         gridView.setFocusable(false);
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                pos = position;
-//                if(interstitialAd.isLoaded()){
-//                    interstitialAd.show();
-//                }else{
                     auxGrid(position,false);
-//                }
 
             }
         });
@@ -94,13 +69,6 @@ public class HomeActivityFragment extends Fragment {
 
         return rootView;
     }
-
-//    public void requestNewInterstitial(){
-//        AdRequest adIntRequest = new AdRequest.Builder()
-//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-//                .build();
-//        interstitialAd.loadAd(adIntRequest);
-//    }
 
     public void auxGrid(int position, boolean special){
         if (special) {
@@ -117,9 +85,5 @@ public class HomeActivityFragment extends Fragment {
             intent.putExtras(extras);
             startActivity(intent);
         }
-//        Toast.makeText(getContext(), socialApps[position] , Toast.LENGTH_SHORT).show();
-////        Debe ser usado en telefono y no en simulador ???
-////        myWebView.setWebViewClient(new WebViewClient());
-//        myWebView.loadUrl(socialWebs[position]);
     }
 }
