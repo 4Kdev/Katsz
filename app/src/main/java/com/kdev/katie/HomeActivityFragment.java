@@ -18,7 +18,6 @@ import com.google.android.gms.ads.AdView;
  * A placeholder fragment containing a simple view.
  */
 public class HomeActivityFragment extends Fragment {
-    private WebView myWebView;
     private Resources res;
     private static String[] socialApps;
     private static String[] socialWebs;
