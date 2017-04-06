@@ -38,8 +38,6 @@ public class HomeActivityFragment extends Fragment {
         socialWebs = res.getStringArray(R.array.social_web);
 
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        View rootWebView = inflater.inflate(R.layout.web_view, container, false);
-        myWebView = (WebView) rootWebView.findViewById(R.id.webview_home);
         buttonMsg = (ImageButton) rootView.findViewById(R.id.button_msg);
 
         adView = (AdView) rootView.findViewById(R.id.adView);
