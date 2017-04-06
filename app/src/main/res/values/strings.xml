@@ -44,6 +44,10 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_load">LoadActivity</string>
     <string name="title_activity_web">WebActivity</string>
+    <string name="skip_text">Skip</string>
+    <string name="special_app_text">Special App</string>
+    <string name="content_msg_text">Image to messenger</string>
+    <string name="messenger_text">Messenger</string>
     
     <string name="facebook_app_id">1877870875787253</string>
 

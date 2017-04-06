@@ -19,15 +19,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/text_button_msg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="14dp"
-                android:text="App Especial"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:text="@string/special_app_text"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
                 android:textStyle="italic" />
@@ -42,24 +43,25 @@
                 android:orientation="horizontal">
 
                 <ImageButton
+                    android:contentDescription="@string/content_msg_text"
                     android:id="@+id/button_msg"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:layout_below="@+id/text_button_msg"
                     android:src="@drawable/messengertest"
                     android:background="@android:color/transparent"
-                    android:paddingLeft="14dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
                     android:paddingTop="14dp"
-                    android:paddingBottom="14dp"
-                    android:onClick="callMsg"/>
+                    android:paddingBottom="14dp"/>
 
                 <TextView
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="Messenger"
-                    android:paddingLeft="16dp"
+                    android:text="@string/messenger_text"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/text_gridview"/>
 
@@ -73,18 +75,17 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="14dp"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
                 android:text="@string/home_title"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
-                android:textStyle="italic"
-                android:layout_below="@+id/button_msg"/>
+                android:textStyle="italic"/>
 
             <android.support.v4.widget.Space
                 android:id="@+id/space1"
                 android:layout_width="match_parent"
-                android:layout_height="26dp"
-                android:layout_below="@+id/textView"/>
+                android:layout_height="26dp"/>
 
             <GridView
                 android:layout_width="match_parent"
@@ -107,5 +108,3 @@
     </com.google.android.gms.ads.AdView>
 
 </RelativeLayout>
-
-<!--520dp-->
